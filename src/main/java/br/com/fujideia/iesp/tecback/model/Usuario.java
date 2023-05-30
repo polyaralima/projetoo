@@ -18,12 +18,23 @@ public class Usuario {
     private Integer id;
     @NotBlank(message = "É necessário informar o nome do usuário")
     private String nome;
-    @NotBlank (message = "É neecessário informar o email do usuario")
+    @NotBlank (message = "É necessário informar o email do usuário")
     private String email;
+    @NotBlank (message = "É neecessário informar o cpf do usuário")
+    private String cpf;
+    @NotBlank (message = "É neecessário informar a data de nascimento o usuário")
+    private String datadenascimento;
     private @NotBlank String usuario;
     @ManyToOne
     @JoinColumn(name = "genero_id")
     private Genero genero;
 
 
+    public int getAnoNascimento() {
+        return 0;
+    }
+
+    public String getSobrenome() {
+        return null;
+    }
 }

@@ -27,7 +27,6 @@ public class AssinaturaService {
         if (optionalAssinatura.isPresent()) {
             Assinatura assinatura = optionalAssinatura.get();
             assinatura.setNome(assinaturaAtualizada.getNome());
-            assinatura.setPreco(assinaturaAtualizada.getPreco());
             return assinaturaRepository.save(assinatura);
         } else {
             throw new IllegalArgumentException("Assinatura não encontrada com o ID: " + id);

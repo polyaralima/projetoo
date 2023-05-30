@@ -19,7 +19,7 @@ public class Assinatura {
     @NotBlank(message = "É necessário informar o nome da assinatura")
     private String nome;
     @NotNull(message = "Campo valor obrigatório")
-    private Double valor;
+    private Double preço;
     @Column(name = "ds_plano",length = 500)
     private @NotBlank String descrição;
     @ManyToOne
